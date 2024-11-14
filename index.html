@@ -1,66 +1,95 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botão Fixo do WhatsApp</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            height: 200vh; /* Adiciona altura extra para testar a rolagem */
-        }
-
-        /* Estilos para o botão flutuante */
-        .whatsapp-button {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #25d366; /* Cor verde do WhatsApp */
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
-        }
-
-        .whatsapp-button a {
-            display: block;
-            width: 100%;
-            height: 100%;
-            line-height: 60px;
-            text-align: center;
-            color: white;
-            text-decoration: none;
-            font-size: 24px;
-        }
-
-        .whatsapp-button:hover {
-            background-color: #1ebe57; /* Cor ao passar o mouse */
-        }
-
-        /* Ícone de telefone (pode ser substituído por uma imagem) */
-        .whatsapp-button::before {
-            content: "☎"; /* Ícone simples de telefone */
-            font-size: 24px;
-            color: white;
-        }
-    </style>
+  <meta charset="utf-8">
+  <title>TesteSite</title>
+  <meta name="generator" content="Google Web Designer 16.1.0.0530">
+  <style id="gwd-text-style">
+    p {
+      margin: 0px;
+    }
+    h1 {
+      margin: 0px;
+    }
+    h2 {
+      margin: 0px;
+    }
+    h3 {
+      margin: 0px;
+    }
+  </style>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0px;
+    }
+    body {
+      background-color: transparent;
+      transform: perspective(1400px) matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1);
+      transform-style: preserve-3d;
+    }
+    body * {
+      transform-style: preserve-3d;
+    }
+    .gwd-rect-7g77 {
+      position: absolute;
+      box-sizing: border-box;
+      border-width: 1px;
+      border-style: solid;
+      border-color: rgb(0, 0, 0);
+      left: -54px;
+      top: -20px;
+      width: 1194px;
+      height: 92px;
+      transform-origin: 992.624px 127.385px 0px;
+      background-image: none;
+      background-color: rgb(66, 181, 62);
+    }
+    .gwd-oval-1dlz {
+      width: 66px;
+      height: 63px;
+      stroke: rgb(0, 0, 0);
+      stroke-width: 1px;
+      fill: rgb(23, 204, 17);
+      --gwd-hidden-css-filter: none;
+      filter: brightness(200%);
+      position: fixed;
+      mix-blend-mode: normal;
+      left: 100%;
+      top: 100%;
+      transform: translate(-100%, -100%) translate3d(-87px, -59px, 0px);
+    }
+  </style>
+  <script type="text/javascript" gwd-events="support" src="gwd-events-support.1.0.js"></script>
+  <script type="text/javascript" gwd-events="handlers">
+    window.gwd = window.gwd || {};
+    gwd.irparaurl = function(event) {
+      document.getElementById("whatsappButton").addEventListener("click", function() {
+        window.location.href = "https://api.whatsapp.com/send/?phone=5545999861237&text&type=phone_number&app_absent=0";
+      });
+    };
+  </script>
+  <script type="text/javascript" gwd-events="registration">
+    // Código de suporte para manipulação de eventos no Google Web Designer
+    // Este bloco de script é gerado automaticamente. Não edite.
+    gwd.actions.events.registerEventHandlers = function(event) {
+      gwd.actions.events.addHandler('whatsappbutton', 'click', gwd.irparaurl, false);
+    };
+    gwd.actions.events.deregisterEventHandlers = function(event) {
+      gwd.actions.events.removeHandler('whatsappbutton', 'click', gwd.irparaurl, false);
+    };
+    document.addEventListener("DOMContentLoaded", gwd.actions.events.registerEventHandlers);
+    document.addEventListener("unload", gwd.actions.events.deregisterEventHandlers);
+  </script>
 </head>
-<body>
 
-    <!-- Conteúdo da página -->
-    <h1>Bem-vindo ao Meu Site</h1>
-    <p>Role a página para ver o botão flutuante.</p>
-
-    <!-- Botão flutuante de WhatsApp -->
-    <div class="whatsapp-button">
-        <a href="https://api.whatsapp.com/send/?phone=5545999861237&text&type=phone_number&app_absent=0" target="_blank"></a>
-    </div>
-
+<body class="htmlNoPages">
+  <svg data-gwd-shape="rectangle" class="gwd-rect-7g77"></svg>
+  <svg data-gwd-shape="oval" preserveAspectRatio="none" viewBox="0 0 66 63" class="gwd-oval-1dlz" id="whatsappbutton">
+    <ellipse cx="50%" cy="50%" rx="32.5" ry="31"></ellipse>
+  </svg>
 </body>
+
 </html>
