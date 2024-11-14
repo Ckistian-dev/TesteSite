@@ -1,12 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SVG Example</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botão Fixo do WhatsApp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Adiciona altura extra para testar a rolagem */
+        }
+
+        /* Estilos para o botão flutuante */
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #25d366; /* Cor verde do WhatsApp */
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000; /* Garante que o botão fique por cima de outros elementos */
+        }
+
+        .whatsapp-button a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            line-height: 60px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+            font-size: 24px;
+        }
+
+        .whatsapp-button:hover {
+            background-color: #1ebe57; /* Cor ao passar o mouse */
+        }
+
+        /* Ícone de telefone (pode ser substituído por uma imagem) */
+        .whatsapp-button::before {
+            content: "☎"; /* Ícone simples de telefone */
+            font-size: 24px;
+            color: white;
+        }
+    </style>
 </head>
 <body>
-  <h1>My SVG</h1>
-  <img src="meu-arquivo.svg" alt="My SVG">
+
+    <!-- Conteúdo da página -->
+    <h1>Bem-vindo ao Meu Site</h1>
+    <p>Role a página para ver o botão flutuante.</p>
+
+    <!-- Botão flutuante de WhatsApp -->
+    <div class="whatsapp-button">
+        <a href="https://api.whatsapp.com/send/?phone=5545999861237&text&type=phone_number&app_absent=0" target="_blank"></a>
+    </div>
+
 </body>
 </html>
