@@ -1,91 +1,185 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Site Básico</title>
+    <title>Therapist Landing Page</title>
+    <link rel="stylesheet" href="styles.css">
     <style>
-        /* Estilos gerais */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
+            background-color: #f4f4f4;
         }
-
         header {
-            background-color: #4CAF50;
+            background: #4CAF50;
             color: white;
+            padding: 20px 0;
             text-align: center;
-            padding: 10px 0;
         }
-
-        section {
-            padding: 20px;
-            max-width: 1200px;
+        .hero {
+            background: url('hero-image.jpg') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+        }
+        .hero h1 {
+            font-size: 2.5em;
+            margin: 0;
+        }
+        .hero p {
+            font-size: 1.2em;
+        }
+        .container {
+            width: 80%;
             margin: auto;
+            overflow: hidden;
+            padding: 20px;
         }
-
-        footer {
-            background-color: #4CAF50;
+        .services, .testimonials, .blog {
+            margin: 40px 0;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .service, .testimonial, .blog-post {
+            background: white;
+            padding: 20px;
+            margin: 10px;
+            flex: 1 1 30%;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            border-radius: 5px;
+        }
+        .contact-form {
+            background: white;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        .contact-form button {
+            background: #4CAF50;
             color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+        .contact {
+            text-align: center;
+            margin: 20px 0;
+        }
+        footer {
             text-align: center;
             padding: 10px 0;
-            position: fixed;
+            background: #333;
+            color: white;
+            position: relative;
             bottom: 0;
             width: 100%;
         }
-
-        /* Estilo para o ícone do WhatsApp */
-        .whatsapp-icon {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            width: 60px;
-            height: 60px;
-            background-color: #25D366;
-            border-radius: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            z-index: 1000;
+        a {
+            color: #4CAF50;
+            text-decoration: none;
         }
-
-        .whatsapp-icon img {
-            width: 30px;
-            height: 30px;
+        @media (max-width: 768px) {
+            .services, .testimonials, .blog {
+                flex-direction: column;
+                align-items: center;
+            }
+            .service, .testimonial, .blog-post {
+                flex: 1 1 100%;
+            }
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Bem-vindo ao nosso site!</h1>
-    </header>
+<header>
+    <h1>Welcome to [Your Name] Therapy</h1>
+    <p>Your journey to healing starts here</p>
+</header>
 
-    <section>
-        <h2>Sobre nós</h2>
-        <p>Somos uma empresa especializada em oferecer soluções de qualidade para nossos clientes. Fale conosco para mais informações.</p>
+<div class="hero">
+    <h1>Transform Your Life</h1>
+    <p>Empowering individuals to find peace and balance</p>
+</div>
 
-        <h2>Serviços</h2>
-        <ul>
-            <li>Consultoria em TI</li>
-            <li>Desenvolvimento de Sites</li>
-            <li>Marketing Digital</li>
-        </ul>
+<div class="container">
+    <section class="services">
+        <h2>Our Services</h2>
+        <div class="service">
+            <h3>Individual Therapy</h3>
+            <p>One-on-one sessions tailored to your unique needs.</p>
+        </div>
+        <div class="service">
+            <h3>Couples Therapy</h3>
+            <p>Helping couples navigate through their challenges and improve their relationships.</p>
+        </div>
+        <div class="service">
+            <h3>Group Therapy</h3>
+            <p>Supportive group sessions for shared experiences and healing.</p>
+        </div>
     </section>
 
-    <footer>
-        <p>&copy; 2024 Nossa Empresa - Todos os direitos reservados</p>
-    </footer>
+    <section class="testimonials">
+        <h2>What Clients Say</h2>
+        <div class="testimonial">
+            <p>"I felt truly heard and supported during my sessions. [Your Name] has changed my life for the better!"</p>
+            <p>- Client A</p>
+        </div>
+        <div class="testimonial">
+            <p>"The tools I learned in therapy have helped me manage my anxiety and improve my relationships."</p>
+            <p>- Client B</p>
+        </div>
+        <div class="testimonial">
+            <p>"I highly recommend [Your Name] for anyone looking for a compassionate and skilled therapist."</p>
+            <p>- Client C</p>
+        </div>
+    </section>
 
-    <!-- Ícone do WhatsApp -->
-    <div class="whatsapp-icon" onclick="window.open('https://wa.me/5588999999999', '_blank');">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp">
+    <section class="blog">
+        <h2>Latest Articles</h2>
+        <div class="blog-post">
+            <h3>5 Tips for Managing Stress</h3>
+            <p>Learn effective strategies to cope with stress and improve your mental well-being.</p>
+        </div>
+        <div class="blog-post">
+            <h3>The Importance of Self-Care</h3>
+            <p>Discover how self-care can enhance your emotional health and overall happiness.</p>
+        </div>
+        <div class="blog-post">
+            <h3>Understanding Anxiety</h3>
+            <p>Gain insights into anxiety and how therapy can help you overcome it.</p>
+        </div>
+    </section>
+
+    <div class="contact-form">
+        <h2>Contact Me</h2>
+        <form action="submit_form.php" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
     </div>
+</div>
+
+<footer>
+    <p>&copy; 2023 [Your Name] Therapy. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
